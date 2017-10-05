@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* added this code to purposefully create a bug to get error log 9/29/17 ykim*/
+Route::get('/example', function () {
+    return view('abc');
+});
