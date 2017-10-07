@@ -11,11 +11,42 @@
 |
 */
 
+/*
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); //move to WelcomeController.php @index()
+});*/
+#Route::get("/", "WelcomeController@index"); __invoke()
+Route::get("/", "WelcomeController");
+
+/*
+Route::get("/book/", function () {
+	return "Show all the books"; //move to BookController.php @index()
+});*/
+Route::get("/book/", "BookController@index");
+
+
+
+/*
+Route::get("/book/{title}", function ($title) {
+	return "You are viewing " .$title; //move to BookController.php @show()
+});*/
+Route::get("/book/{title}", "BookController@show");
+
+
+
+Route::get("/example", function () {
+	return Hash::make("topsecret");
 });
 
-/* added this code to purposefully create a bug to get error log 9/29/17 ykim*/
-Route::get('/example', function () {
-    return view('abc');
+
+
+/*
+Route::get('/book/war-and-peace', function () {
+	return "You want to view the book War and Peace.";
 });
+*/
+
+/* added this code to purposefully create a bug to get error log 9/29/17 ykim*/
+/*Route::get('/example', function () {
+    return view('abc');
+});*/
