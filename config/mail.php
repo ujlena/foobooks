@@ -2,6 +2,9 @@
 
 return [
 
+    'supportEmail' => 'support@foobooks.dwa-ykim.me',
+    'systemEmail' => 'foobooks.dwa-ykim.me',
+
     /*
     |--------------------------------------------------------------------------
     | Mail Driver

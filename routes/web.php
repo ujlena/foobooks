@@ -11,6 +11,21 @@
 |
 */
 
+/***
+* 
+***/
+Route::get('/env', function () {
+    dump(config('app.name'));
+    dump(config('app.env'));
+    dump(config('app.debug'));
+    dump(config('app.url'));
+});
+
+/***
+* Practice
+***/
+Route::any("/practice/{n?}", "PracticeController@index");
+
 /*
 Route::get('/', function () {
     return view('welcome'); //move to WelcomeController.php @index()
