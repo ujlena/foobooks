@@ -14,9 +14,10 @@ class PracticeController extends Controller
     */
     public function practice5()
     {
-        // use markdown extra
-        $parser = new MarkdownExtra();
-        echo $parser->parse('# Hello World');
+       // use markdown extra
+		$parser = new MarkdownExtra();
+		echo $parser->parse("# Hello World");
+
     }
 
 
@@ -25,7 +26,14 @@ class PracticeController extends Controller
     */
     public function practice4()
     {
-        
+    	Debugbar::info($_GET);
+        Debugbar::info("hello world");
+        Debugbar::info(["a" => 1, "b" => 2, "c" => 3]);
+		Debugbar::error('Error!');
+		Debugbar::warning('Watch out…');
+		Debugbar::addMessage('Another message', 'mylabel');
+
+		return "Practice 4";
     }
 
     /**
